@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sally Student Resume</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div id="application-root"></div>
+
+    <script
+        src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script type="text/babel">
+
+        function App(props){
+            console.log(props);
+            return (
+                <header>
+                    {props.children}
+                </header>
+            );
+        }
+
+        ReactDOM.render(
+            <App className='my-class'>
+            <main>
+                <h1>Sally Student</h1>
+                <img id="profilePic" src="https://images.britcdn.com/wp-content/uploads/2017/12/ilana-glazer.png" alt="Profile Photo" ></img>
+            </main>
+            <section>
+                <h2>Contact Information</h2>
+                <ul>
+                    <li><a href="mailto:SallyStudent@TF.edu">SallyStudent@TF.edu</a></li>
+                    <li>512-432-1198</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Education</h2>
+                <h3>University of Texas at Austin</h3>
+                    <ul>
+                        <li>Bachelor of Science in Computer Science</li>
+                    </ul>
+                <h3>Austin Community College</h3>
+                    <ul>
+                        <li>Associate of Applied Science in Veterinary Technology</li>
+                    </ul>
+            </section>
+            <section>
+                <h2>Work History</h2>
+                <h3>Junior Developer</h3>
+                <h4>Drumroll</h4>
+                    <ul>
+                        <li><address>Austin, TX</address>01/2015 - 01/2019</li>
+                    </ul>
+                <h5>Responsibilities</h5>
+                    <ul>
+                        <li>Translated UI/UX design wireframes to code to produce visual elements</li>
+                        <li>Worked with Developer Lead to bridge gap between design and implementation</li>
+                    </ul>
+                <h3>Veterinary Technician</h3>
+                <h4>VCA Animal Hospital</h4>
+                    <ul>
+                        <li><address>Austin, TX</address>06/2013 - 12/2014</li>
+                    </ul>
+                <h5>Responsibilities</h5>
+                    <ul>
+                        <li>Performed diagnostic tests and x-rays</li>
+                        <li>Prepared animals for surgery</li>
+                        <li>Observed and reported animal behavior</li>
+                    </ul>
+            </section>
+            </App>,
+            document.querySelector('#application-root')
+        );
+
+
+    </script>
+</body>
+</html>
